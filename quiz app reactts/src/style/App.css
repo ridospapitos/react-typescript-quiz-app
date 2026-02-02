@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+#root {
+    display: flex;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    letter-spacing: 0.1cap;
+    color: white;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #090979;
+    background: linear-gradient(0deg, rgba(9, 9, 121, 1) 0%, rgba(2, 0, 36, 1) 100%);
+}
+
+.ExitBtn {
+    width: 80px;
+    height: 30px;
+    border-radius: 12px;
+    border: 2px #050528 solid;
+    background: #0b0b52;
+    color: #ffffff;
+    transition: 0.3s;
+    font-size: 16px;
+    margin-top: 50px;
+}
+
+.ExitBtn:hover {
+    background: #121285;
+    cursor: pointer;
+}

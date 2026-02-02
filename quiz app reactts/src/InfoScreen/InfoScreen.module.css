@@ -1,0 +1,18 @@
+.Wrapper {
+    width: 750px;
+    height: 400px;
+    background-color: #0b0b52;
+    border: 2px #050528 solid;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.Rules {
+    color: white;
+    margin: 20px 55px 20px 0;
+}
+
+li {
+    margin: 20px 10px 20px 25px;
+    font-size: 17px;
+}

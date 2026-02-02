@@ -1,0 +1,31 @@
+.StartBtn {
+    width: 250px;
+    height: 55px;
+    border-radius: 20px;
+    border: 2px #050528 solid;
+    background: #0b0b52;
+    color: #ffffff;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.StartBtn:hover {
+    background: #121285;
+    cursor: pointer;
+}
+
+.InfoBtn {
+    width: 55px;
+    height: 55px;
+    border-radius: 20px;
+    border: 2px #050528 solid;
+    background: #0b0b52;
+    color: #ffffff;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.InfoBtn:hover {
+    background: #121285;
+    cursor: pointer;
+}
