@@ -15,7 +15,7 @@ function App() {
     <div className={s.Wrapper}>
       {step === 'start' && <StartScreen onStart={() => {setStep('game')}} onInfo={() => {setStep('info')}} onLanguage={(language: 'Eng' | 'Rus') => {setLanguage(language)}} languageInfo={language} />}
       {step === 'game' && <GameScreen onGameEnd={() => {setStep('end')}} giveScore={(score: number) => {setScore(score)}} languageInfo={language} />}
-      {step === 'end' && <EndScreen score={score} languageInfo={language} onUserPrompt={() => {setStep('start')}} />}
+      {step === 'end' && <EndScreen score={score} languageInfo={language} />}
       {step === 'info' && <InfoScreen languageInfo={language} />}
       <button className='ExitBtn' onClick={() => {setStep('start')}}>{language === 'Eng' ? 'Exit' : 'Выйти'}</button>
     </div>

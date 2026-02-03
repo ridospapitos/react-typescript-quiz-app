@@ -3,11 +3,10 @@ import s from './EndScreen.module.css'
 interface Props{
     score: number
     languageInfo: 'Eng' | 'Rus'
-    onUserPrompt: () => void
 }
 
 
-const EndScreen = ( { score, languageInfo, onUserPrompt }: Props ) => {
+const EndScreen = ( { score, languageInfo }: Props ) => {
 
 const percent20 = (score: number) => {
         return (
@@ -93,31 +92,11 @@ const percent20 = (score: number) => {
         }
     }
 
-    const ResultPost = () => {
-        const UserName = prompt('Введите имя пользователя')
-        if (UserName !== '') {
-            try {
-                fetch('http://localhost:3000/TopList', {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        UserName: UserName,
-                        Score: score
-                    }),
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                })
-            } catch(err) {
-                console.log(err)
-            }
-            onUserPrompt()
-        }
-    }
+
 
     return (
         <div className={s.Wrapper}>
             {toReturn(score)}
-            <button className={s.ResultBtn} onClick={ResultPost}>Выложить результат</button>
         </div>
     )
 }
