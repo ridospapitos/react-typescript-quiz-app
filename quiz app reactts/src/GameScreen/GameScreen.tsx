@@ -16,8 +16,8 @@ const GameScreen = ( { onGameEnd, giveScore, languageInfo }: onGameEnd ) => {
         correct: string,
     }
 
-    let QUESTIONS = useRef<Question[]>([])
-    let [question, setQuestion] = useState(9)
+    let [QUESTIONS, setQUESTIONS] = useState<Question[]>([])
+    let [question, setQuestion] = useState(0)
 
     const [time, setTime] = useState(60)
     const timeRef = useRef<number | undefined>(undefined)
@@ -42,7 +42,7 @@ const GameScreen = ( { onGameEnd, giveScore, languageInfo }: onGameEnd ) => {
         try {
         const resp = await fetch(`http://localhost:3000/questions${languageInfo}`)
         const data = await resp.json()
-        QUESTIONS.current = data
+        setQUESTIONS(data)
         } catch(err) {
         console.log(err)
         }
@@ -69,13 +69,13 @@ const GameScreen = ( { onGameEnd, giveScore, languageInfo }: onGameEnd ) => {
     }
 
     const getAnswers = (question: number) => {
-        const Answers: string | undefined = QUESTIONS.current[question]?.answers
+        const Answers: string | undefined = QUESTIONS[question]?.answers
         if (!Answers) return []
         return Answers.split(', ')
     }
 
     const isCorrect = (answer: string, question: number) => {
-        correctAnswer.current = QUESTIONS.current[question]?.correct
+        correctAnswer.current = QUESTIONS[question]?.correct
         if (!correctAnswer) return
         if (answer === correctAnswer.current) {
             setTimeout(() => {
@@ -107,7 +107,7 @@ const GameScreen = ( { onGameEnd, giveScore, languageInfo }: onGameEnd ) => {
         }
     }
     useEffect(() => {
-        isTimeOver
+        isTimeOver()
     }, [time])
 
     const isGameOver = () => {
@@ -122,7 +122,7 @@ const GameScreen = ( { onGameEnd, giveScore, languageInfo }: onGameEnd ) => {
 
 
     const QuestionTemplate = (i: number) => {
-        if (QUESTIONS.current.length === 0) return
+        if (QUESTIONS.length === 0) return
 
         return (
             <button 
@@ -136,7 +136,7 @@ const GameScreen = ( { onGameEnd, giveScore, languageInfo }: onGameEnd ) => {
     return (
         <div className={s.Wrapper}>
             <p>{time}</p>
-            <h1 className={s.Title}>{QUESTIONS.current[question]?.title || 'Loading...'}</h1>
+            <h1 className={s.Title}>{QUESTIONS[question]?.title || 'Loading...'}</h1>
             {shuffledIndexes.map((index) => (
                     <React.Fragment key={index}>
                         {QuestionTemplate(index)}
