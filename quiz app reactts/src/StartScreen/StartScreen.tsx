@@ -5,11 +5,10 @@ interface FunctionProps {
     onInfo: () => void;
     onLanguage: (language: 'Eng' | 'Rus') => void;
     languageInfo: 'Eng' | 'Rus'
-    onTop: () => void;
 }
 
 
-function StartScreen ({ onStart, onInfo, onLanguage, languageInfo, onTop }: FunctionProps) {
+function StartScreen ({ onStart, onInfo, onLanguage, languageInfo}: FunctionProps) {
 
     const getText = () => {
         if(languageInfo === 'Eng') return 'Rus'
