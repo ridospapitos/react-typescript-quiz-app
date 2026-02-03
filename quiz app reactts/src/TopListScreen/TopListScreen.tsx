@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import s from './TopListScreen.module.css'
 
 interface Props {
-    languageInfo: 'Eng' | 'Рус'
+    languageInfo: 'Eng' | 'Rus'
 }
 
 const TopListScreen = ( { languageInfo }: Props ) => {

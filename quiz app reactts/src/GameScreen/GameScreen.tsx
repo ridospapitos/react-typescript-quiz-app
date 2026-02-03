@@ -4,7 +4,7 @@ import s from './GameScreen.module.css'
 interface onGameEnd {
     onGameEnd: () => void;
     giveScore: (score: number) => void;
-    languageInfo: 'Eng' | 'Рус'
+    languageInfo: 'Eng' | 'Rus'
 }
 
 const GameScreen = ( { onGameEnd, giveScore, languageInfo }: onGameEnd ) => {
@@ -40,7 +40,7 @@ const GameScreen = ( { onGameEnd, giveScore, languageInfo }: onGameEnd ) => {
 
     async function getQ() {
         try {
-        const resp = await fetch(`http://localhost:3000/questions${languageInfo}`)
+        const resp = await fetch(`https://69821bc4c9a606f5d4491295.mockapi.io/items/questions${languageInfo}`)
         const data = await resp.json()
         setQUESTIONS(data)
         } catch(err) {

@@ -1,7 +1,7 @@
 import s from './InfoScreen.module.css'
 
 interface Props {
-    languageInfo: 'Eng' | 'Рус'
+    languageInfo: 'Eng' | 'Rus'
 }
 
 const InfoScreen = ( { languageInfo }: Props ) => {

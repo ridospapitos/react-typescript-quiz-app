@@ -2,7 +2,7 @@ import s from './EndScreen.module.css'
 
 interface Props{
     score: number
-    languageInfo: 'Eng' | 'Рус'
+    languageInfo: 'Eng' | 'Rus'
     onUserPrompt: () => void
 }
 
