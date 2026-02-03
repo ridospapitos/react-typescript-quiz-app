@@ -4,9 +4,10 @@ import s from './GameScreen.module.css'
 interface onGameEnd {
     onGameEnd: () => void;
     giveScore: (score: number) => void;
+    languageInfo: 'Eng' | 'Рус'
 }
 
-const GameScreen = ( { onGameEnd, giveScore }: onGameEnd ) => {
+const GameScreen = ( { onGameEnd, giveScore, languageInfo }: onGameEnd ) => {
 
     interface Question {
         id: string,
@@ -16,7 +17,7 @@ const GameScreen = ( { onGameEnd, giveScore }: onGameEnd ) => {
     }
 
     let QUESTIONS = useRef<Question[]>([])
-    let [question, setQuestion] = useState(0)
+    let [question, setQuestion] = useState(9)
 
     const [time, setTime] = useState(60)
     const timeRef = useRef<number | undefined>(undefined)
@@ -39,7 +40,7 @@ const GameScreen = ( { onGameEnd, giveScore }: onGameEnd ) => {
 
     async function getQ() {
         try {
-        const resp = await fetch("http://localhost:3000/questions")
+        const resp = await fetch(`http://localhost:3000/questions${languageInfo}`)
         const data = await resp.json()
         QUESTIONS.current = data
         } catch(err) {

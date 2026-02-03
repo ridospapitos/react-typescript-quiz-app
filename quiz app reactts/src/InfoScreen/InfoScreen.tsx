@@ -1,14 +1,19 @@
 import s from './InfoScreen.module.css'
 
-const InfoScreen = () => {
+interface Props {
+    languageInfo: 'Eng' | 'Рус'
+}
+
+const InfoScreen = ( { languageInfo }: Props ) => {
+
     return (
         <div className={s.Wrapper}>
-            <h1 className={s.Rules}>📜 Game Rules</h1>
+            <h1 className={s.Rules}>{languageInfo === 'Eng' ? '📜 Game Rules' : '📜 Игровые Правила'}</h1>
             <ul>
-                <li>Goal: Answer questions by tapping the buttons on the cards.</li>
-                <li>Scoring: Correct answer = +1 point. Wrong answer = 0.</li>
-                <li>Timer: You have 1 minute per question.</li>
-                <li>Results: See your final score and all answers at the end.</li>
+                <li>{languageInfo === 'Eng' ? 'Goal: Answer questions by tapping the buttons on the cards.' : 'Цель: Отвечать на вопросы, нажимая на кнопки на карточках.'}</li>
+                <li>{languageInfo === 'Eng' ? 'Scoring: Correct answer = +1 point. Wrong answer = 0.' : 'Оценка: Правильный ответ = +1 балл. Неправильный ответ = 0'}</li>
+                <li>{languageInfo === 'Eng' ? 'Timer: You have 1 minute per question.' : 'Таймер: На каждый вопрос отводится 1 минута.'}</li>
+                <li>{languageInfo === 'Eng' ? 'Results: See your final score and all answers at the end.' : 'Результаты: В конце вы увидите свой итоговый результат и все ответы.'}</li>
             </ul>
         </div>
     )

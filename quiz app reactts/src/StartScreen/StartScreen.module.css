@@ -29,3 +29,35 @@
     background: #121285;
     cursor: pointer;
 }
+
+.LanguageBtn {
+    width: 55px;
+    height: 55px;
+    border-radius: 20px;
+    border: 2px #050528 solid;
+    background: #0b0b52;
+    color: #ffffff;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.LanguageBtn:hover {
+    background: #121285;
+    cursor: pointer;
+}
+
+.TopBtn {
+    width: 55px;
+    height: 55px;
+    border-radius: 20px;
+    border: 2px #050528 solid;
+    background: #0b0b52;
+    color: #ffffff;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.TopBtn:hover {
+    background: #121285;
+    cursor: pointer;
+}
