@@ -1,3 +1,17 @@
+.Wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .StartBtn {
     width: 250px;
     height: 55px;
@@ -5,59 +19,40 @@
     border: 2px #050528 solid;
     background: #0b0b52;
     color: #ffffff;
-    transition: 0.3s;
     font-size: 16px;
+    transition: 0.3s;
 }
 
-.StartBtn:hover {
-    background: #121285;
-    cursor: pointer;
-}
-
-.InfoBtn {
+.LanguageBtn, .InfoBtn {
     width: 55px;
     height: 55px;
     border-radius: 20px;
     border: 2px #050528 solid;
     background: #0b0b52;
     color: #ffffff;
-    transition: 0.3s;
     font-size: 14px;
+    transition: 0.3s;
 }
 
-.InfoBtn:hover {
+.StartBtn:hover, .LanguageBtn:hover, .InfoBtn:hover {
     background: #121285;
     cursor: pointer;
 }
 
-.LanguageBtn {
-    width: 55px;
-    height: 55px;
-    border-radius: 20px;
-    border: 2px #050528 solid;
-    background: #0b0b52;
-    color: #ffffff;
-    transition: 0.3s;
-    font-size: 14px;
-}
+@media (max-width: 480px) {
+    .Wrapper {
+        width: 300px;
+        margin: 0 auto;
+        gap: 15px 10px;
+    }
 
-.LanguageBtn:hover {
-    background: #121285;
-    cursor: pointer;
-}
+    .StartBtn {
+        width: 100%;
+        flex-basis: 100%;
+    }
 
-.TopBtn {
-    width: 55px;
-    height: 55px;
-    border-radius: 20px;
-    border: 2px #050528 solid;
-    background: #0b0b52;
-    color: #ffffff;
-    transition: 0.3s;
-    font-size: 14px;
-}
-
-.TopBtn:hover {
-    background: #121285;
-    cursor: pointer;
+    .LanguageBtn, .InfoBtn {
+        width: 55px;
+        flex-basis: 55px;
+    }
 }

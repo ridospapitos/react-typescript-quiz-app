@@ -1,76 +1,60 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #050528;
+}
+
 .Wrapper {
     display: flex;
     flex-direction: column;
-    width: 700px;
-    height: 450px;
+    width: 90%;
+    max-width: 700px;
+    min-height: 450px;
+    height: auto;
     background-color: #0b0b52;
     border: 2px #050528 solid;
     border-radius: 30px;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .Title {
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .StatusText {
     font-size: 20px;
-    margin-bottom: 30px;  
+    margin-bottom: 20px;  
 }
 
 .Text {
     font-size: 16px;
-    line-height: 200%;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.Score20 {
-    margin-bottom: 30px;
-    color: #ff0000;    
+.Score20, .Score50, .Score80, .Score100 {
+    margin-bottom: 20px;
 }
 
-.Status20 {
+.Status20, .Status50, .Status80, .Status100 {
     font-size: 20px;
-    margin-bottom: 30px;
-    color: #ff0000;  
+    margin-bottom: 20px;
 }
 
-.Score50 {
-    margin-bottom: 30px;
-    color: #ff7700;    
-}
-
-.Status50 {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #ff7700;  
-}
-
-.Score80 {
-    margin-bottom: 30px;
-    color: #fff700;    
-}
-
-.Status80 {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #fff700;  
-}
-
-.Score100 {
-    margin-bottom: 30px;
-    color: #09ff00;    
-}
-
-.Status100 {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #09ff00;  
-}
+.Score20, .Status20 { color: #ff0000; }
+.Score50, .Status50 { color: #ff7700; }
+.Score80, .Status80 { color: #fff700; }
+.Score100, .Status100 { color: #09ff00; }
 
 .ResultBtn {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: 55px;
     border-radius: 20px;
     border: 2px #050528 solid;
@@ -79,9 +63,31 @@
     transition: 0.3s;
     font-size: 15px;
     align-self: center;
+    margin-top: auto;
 }
 
 .ResultBtn:hover {
     background: #121285;
     cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .Wrapper {
+        width: 95%;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .Title {
+        font-size: 22px;
+    }
+
+    .StatusText, .Status20, .Status50, .Status80, .Status100 {
+        font-size: 18px;
+    }
+
+    .Text {
+        font-size: 14px;
+        line-height: 1.4;
+    }
 }

@@ -1,10 +1,21 @@
 .Wrapper {
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: 95%;
+    max-width: 700px;
     height: auto;
     background-color: #0b0b52;
     border: 2px #050528 solid;
     border-radius: 30px;
     padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .Wrapper {
+        padding: 15px;
+        border-radius: 20px;
+        width: 98%;
+    }
 }
