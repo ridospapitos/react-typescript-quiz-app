@@ -41,12 +41,15 @@ body {
     justify-content: center;
 }
 
-.ExitBtn:hover {
-    background: #121285;
-    cursor: pointer;
+@media (hover: hover) {
+    .ExitBtn:hover {
+        background: #121285;
+        cursor: pointer;
+    }
 }
 
 .ExitBtn:active {
+    background: #121285;
     transform: scale(0.95);
 }
 

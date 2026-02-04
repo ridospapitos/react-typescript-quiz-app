@@ -22,12 +22,15 @@
     box-sizing: border-box;
 }
 
-.StartBtn:hover {
-    background: #121285;
-    cursor: pointer;
+@media (hover: hover) {
+    .StartBtn:hover {
+        background: #121285;
+        cursor: pointer;
+    }
 }
 
 .StartBtn:active {
+    background: #121285;
     transform: scale(0.98);
 }
 

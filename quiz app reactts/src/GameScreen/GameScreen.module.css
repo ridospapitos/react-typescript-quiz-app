@@ -53,9 +53,16 @@ p {
     pointer-events: none;
 }
 
-.QuestionBtn:hover {
+@media (hover: hover) {
+    .QuestionBtn:hover {
+        background: #121285;
+        cursor: pointer;
+    }
+}
+
+.QuestionBtn:active {
     background: #121285;
-    cursor: pointer;
+    transform: scale(0.96);
 }
 
 @media (max-width: 550px) {

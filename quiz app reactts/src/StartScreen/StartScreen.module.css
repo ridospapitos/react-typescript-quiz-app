@@ -34,14 +34,26 @@
     transition: 0.3s;
 }
 
-.StartBtn:hover, .LanguageBtn:hover, .InfoBtn:hover {
+@media (hover: hover) {
+    .StartBtn:hover, 
+    .LanguageBtn:hover, 
+    .InfoBtn:hover {
+        background: #121285;
+        cursor: pointer;
+    }
+}
+
+.StartBtn:active, 
+.LanguageBtn:active, 
+.InfoBtn:active {
     background: #121285;
-    cursor: pointer;
+    transform: scale(0.96);
 }
 
 @media (max-width: 480px) {
     .Wrapper {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         margin: 0 auto;
         gap: 15px 10px;
     }

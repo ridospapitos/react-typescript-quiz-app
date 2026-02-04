@@ -12,6 +12,28 @@
     margin: 0 auto;
 }
 
+@media (hover: hover) {
+    .StartBtn:hover,
+    .LanguageBtn:hover,
+    .InfoBtn:hover,
+    .ExitBtn:hover,
+    .ResultBtn:hover,
+    .QuestionBtn:hover {
+        background: #121285;
+        cursor: pointer;
+    }
+}
+
+.StartBtn:active,
+.LanguageBtn:active,
+.InfoBtn:active,
+.ExitBtn:active,
+.ResultBtn:active,
+.QuestionBtn:active {
+    background: #121285;
+    transform: scale(0.96);
+}
+
 @media (max-width: 480px) {
     .Wrapper {
         padding: 15px;

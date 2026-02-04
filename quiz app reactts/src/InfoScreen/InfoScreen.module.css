@@ -44,3 +44,27 @@ li {
         margin: 10px 5px 10px 15px;
     }
 }
+
+.StartBtn, .ResultBtn, .ExitBtn, .InfoBtn, .LanguageBtn {
+    transition: 0.3s;
+}
+
+@media (hover: hover) {
+    .StartBtn:hover, 
+    .ResultBtn:hover, 
+    .ExitBtn:hover, 
+    .InfoBtn:hover, 
+    .LanguageBtn:hover {
+        background: #121285;
+        cursor: pointer;
+    }
+}
+
+.StartBtn:active, 
+.ResultBtn:active, 
+.ExitBtn:active, 
+.InfoBtn:active, 
+.LanguageBtn:active {
+    background: #121285;
+    transform: scale(0.96);
+}
